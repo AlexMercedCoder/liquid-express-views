@@ -1,4 +1,5 @@
 ## liquid-express-views
+### by Alex Merced of AlexMercedCoder.com
 
 It's pretty simple
 
