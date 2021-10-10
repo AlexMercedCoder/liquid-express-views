@@ -1,6 +1,6 @@
 var { Liquid } = require('liquidjs');
 
-const liquidView = (app, options) => {
+const liquidView = (app, options = {}) => {
 
     const {viewDir = "./views", middleware = (app) => {}} = options
 

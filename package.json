@@ -1,6 +1,6 @@
 {
   "name": "liquid-express-views",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "tool for connecting liquid templating to express easily",
   "main": "index.js",
   "scripts": {
