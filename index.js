@@ -1,14 +1,18 @@
 var { Liquid } = require('liquidjs');
 
-const liquidView = (app) => {
+const liquidView = (app, options) => {
+
+    const {viewDir = "./views", middleware = (app) => {}} = options
 
     var engine = new Liquid({
-        root: './views/'
+        root: viewDir
     });
     
     app.engine('liquid', engine.express()); 
-    app.set('views', './views');            // specify the views directory
+    app.set('views', viewDir);            // specify the views directory
     app.set('view engine', 'liquid');
+    middleware(app)
+
 
     return app
 }
