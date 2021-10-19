@@ -4,9 +4,7 @@ const liquidView = (app, options = {}) => {
 
     const {viewDir = "./views", middleware = (app) => {}, engineConfig = (engine) => {}} = options
 
-    var engine = new Liquid({
-        root: viewDir
-    });
+    var engine = new Liquid();
     engineConfig(engine)
     
     app.engine('liquid', engine.express());
