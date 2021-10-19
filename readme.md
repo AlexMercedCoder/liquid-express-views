@@ -23,3 +23,5 @@ You can pass a secondary argument that is an object with the following propertie
 - viewDir: string representing view directory, defaults to "./views"
 - middleware: a function that can be used to register middleware, defaults to `(app) => {}`
 - engineConfig: a function that can be used to adjust templating engine, like registering liquid plugins, defaults to `(engine) => {}`
+- root: can pass an array of other directories to check for templates, defaults to "./views"
+- ext: can pass a file extension to look for, defaults to "./liquid"

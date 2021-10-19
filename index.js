@@ -6,9 +6,11 @@ const liquidView = (app, options = {}) => {
     viewDir = "./views",
     middleware = (app) => {},
     engineConfig = (engine) => {},
+    root = "./views",
+    ext = ".liquid"
   } = options;
 
-  var engine = new Liquid({ root: path.resolve(__dirname, "views/") });
+  var engine = new Liquid({root, ext});
   engineConfig(engine);
 
   app.engine("liquid", engine.express());
