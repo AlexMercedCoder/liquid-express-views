@@ -6,7 +6,7 @@ const liquidView = (app, options = {}) => {
     viewDir = "./views",
     middleware = (app) => {},
     engineConfig = (engine) => {},
-    root = "./views",
+    root = ["./views", "./", process.cwd() + "/views/"],
     ext = ".liquid"
   } = options;
 
